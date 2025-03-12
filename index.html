@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Password Strength Meter using HTML CSS & JavaScript</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section>
+		<div class="content">
+			<h2>Password Strength Checker</h2>
+			
+			<div class="container">
+				<form>
+					<div class="input-container" id="hover-box">
+						<input onkeyup="trigger()" type="Password" name="" placeholder="Type password">
+						<span class="hideShowBtn"><i class="fa-solid fa-eye"></i></span>
+					</div>
+					<div class="indicator">
+						<span class="weak"></span>
+						<span class="medium"></span>
+						<span class="strong"></span>
+					</div>
+					<div class="text"></div>
+				</form>
+			</div>
+
+		</div>
+	</section>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+@import 'https://fonts.googleapis.com/css?family=Ubuntu:300, 400, 500, 700';
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Ubuntu', sans-serif;
+	box-sizing: border-box;
+}
+
+html,body{
+	min-height: 100vh;
+	background: #b5bbc9;
+}
+
+section{
+	position: relative;
+	width: 100%;
+	height: 80vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+}
+
+section::before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 100vh;
+	height: 100vh;
+	background: #585e6c;
+	border-radius: 50%;
+	transform-origin: bottom;
+	transform: translateX(-50%) scale(4);
+}
+
+section .content{
+	position: relative;
+	z-index: 1;
+	max-width: 1000px;
+	text-align: center;
+}
+
+section .content h2{
+	font-size: 3em;
+	color: #fff;
+}
+
+.container{
+	width: 420px;
+	background: #fff;
+	padding: 20px 30px;
+	border-radius: 8px;
+	box-shadow: 0 0 15px rgba(0,0,0,0.2);
+	margin: auto;
+    margin-top: 30px;
+	transition: transform 0.3s ease;
+	box-shadow: 0.3s ease;
+}
+
+
+form .input-container{
+	height: 45px;
+	width: 100%;
+	display: flex;
+	position: relative;
+}
+
+.container:hover{
+    cursor: pointer;
+    border: 2px solid black;
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+form .input-container input:hover{
+    border: 1.5px solid black;
+    box-shadow: 0 0 5px gray;
+}
+
+form .input-container input{
+	height: 100%;
+	width: 100%;
+	border: 1px solid lightgrey;
+	padding-left: 15px;
+	outline: none;
+	border-radius: 5px;
+	font-size: 17px;
+}
+
+
+form .input-container input:focus{
+	border-color: #27a360;
+	box-shadow: inset 0 0 3px #2fd072;
+}
+
+form .input-container .hideShowBtn{
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: 600;
+	display: none;
+	color: #757373;
+    font-size: 13px;
+}
+
+
+form .indicator{
+	height: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 10px 0;
+	display: none;
+}
+
+form .indicator span{
+	width: 100%;
+	height: 100%;
+	background: lightgrey;
+	border-radius: 5px;
+	position: relative;
+}
+
+form .indicator span.medium{
+	margin: 0 3px;
+}
+
+
+form .indicator span:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+
+form .indicator span.active.weak:before{
+	background: #ff4757;
+}
+
+form .indicator span.active.medium:before{
+	background: orange;
+}
+
+form .indicator span.active.strong:before{
+	background: #23ad5c;
+}
+
+form .text{
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: -10px;
+	display: none;
+}
+
+form .text.weak{
+	color: #ff4757;
+}
+
+form .text.medium{
+	color: orange;
+}
+
+form .text.strong{
+	color: #23ad5c;
+}
+
+.message-box{
+	transition: transform 0.3s ease;
+	box-shadow: 0.3s ease;
+}
+
+.message-box:hover{
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
